@@ -1,0 +1,33 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: 盛康宁
+  Date: 2023/8/22
+  Time: 15:54
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+</head>
+<body>
+<form action="${ctx}/lottery/user/register" method="post">
+  <div id="box" style="height:300px; width:400px; margin:auto; text-align:center">
+    <h1>用户登录</h1>
+    用户名：<input type="text"  name="username"/><br><br>
+    密码：<input type="password"  name="password"/><br><br>
+    确认密码：<input type="password"  name="makePassword"/><br><br>
+    <input type="submit" value="注册"/>
+    <input type="button" value="去登录" onClick="loginPage()" />
+    <h6>${info}</h6>
+  </div>
+</form>
+
+<script type="text/javascript">
+  function loginPage(){
+    window.location.href = "${ctx}/lottery/login.jsp";
+  }
+</script>
+</body>
+</html>
